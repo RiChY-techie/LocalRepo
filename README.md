@@ -1,1 +1,1 @@
-# Author RiChY
+# Basic flask app
