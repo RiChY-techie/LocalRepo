@@ -1,1 +1,27 @@
-<p>this is a new repo.,... vicky...</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Number Guessing Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 400px; margin: auto; }
+        h1 { color: #333; }
+        button { margin: 5px; padding: 10px 15px; font-size: 16px; cursor: pointer; }
+        .message { margin: 20px 0; font-weight: bold; font-size: 18px; }
+        form { text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>AI Number Guessing Game</h1>
+    <div class="message">{{ message }}</div>
+    {% if 'guessed' not in message %}
+    <form method="POST">
+        <button name="feedback" value="low" type="submit">Too Low</button>
+        <button name="feedback" value="correct" type="submit">Correct</button>
+        <button name="feedback" value="high" type="submit">Too High</button>
+    </form>
+    {% else %}
+    <a href="/">Play Again</a>
+    {% endif %}
+</body>
+</html>
